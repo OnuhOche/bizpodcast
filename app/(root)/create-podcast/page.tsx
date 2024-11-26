@@ -10,7 +10,7 @@ import {
   FormControl,
   FormDescription,
   FormField,
-   FormItem,
+  FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
@@ -199,7 +199,7 @@ const CreatePodcast = () => {
                 </Button>
               </div>
           </div>
-        </form>  
+        </form>
       </Form>
     </section>
   )

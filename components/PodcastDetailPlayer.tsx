@@ -10,7 +10,7 @@ import { PodcastDetailPlayerProps } from "@/types";
 
 import LoaderSpinner from "./LoaderSpinner";
 import { Button } from "./ui/button";
-import { useToast } from "@/hooks/use-toast"; 
+import { useToast } from "@/components/ui/use-toast"; 
 
 const PodcastDetailPlayer = ({
   audioUrl,
