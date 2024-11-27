@@ -5,12 +5,12 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 import { api } from "@/convex/_generated/api";
-import { useAudio } from '@/providers/AudioProvider';
+import { useAudio } from "@/providers/AudioProvider";
 import { PodcastDetailPlayerProps } from "@/types";
 
 import LoaderSpinner from "./LoaderSpinner";
 import { Button } from "./ui/button";
-import { useToast } from "@/components/ui/use-toast"; 
+import { useToast } from "./ui/use-toast";
 
 const PodcastDetailPlayer = ({
   audioUrl,
@@ -25,7 +25,7 @@ const PodcastDetailPlayer = ({
   authorId,
 }: PodcastDetailPlayerProps) => {
   const router = useRouter();
-  const { setAudio } = useAudio();
+  // const { setAudio } = useAudio();
   const { toast } = useToast();
   const [isDeleting, setIsDeleting] = useState(false);
   const deletePodcast = useMutation(api.podcasts.deletePodcast);
@@ -47,13 +47,13 @@ const PodcastDetailPlayer = ({
   };
 
   const handlePlay = () => {
-    setAudio({
-      title: podcastTitle,
-      audioUrl,
-      imageUrl,
-      author,
-      podcastId,
-    });
+    // setAudio({
+    //   title: podcastTitle,
+    //   audioUrl,
+    //   imageUrl,
+    //   author,
+    //   podcastId,
+    // });
   };
 
   if (!imageUrl || !authorImageUrl) return <LoaderSpinner />;
@@ -92,7 +92,7 @@ const PodcastDetailPlayer = ({
 
           <Button
             onClick={handlePlay}
-            className="text-16 w-full max-w-[250px] bg-orange-1 font-extrabold text-white-1"
+            className="text-16 w-full max-w-[250px] bg-green-1 font-extrabold text-white-1"
           >
             <Image
               src="/icons/Play.svg"
@@ -127,7 +127,7 @@ const PodcastDetailPlayer = ({
               />
               <h2 className="text-16 font-normal text-white-1">Delete</h2>
             </div>
-          )} 
+          )}
         </div>
       )}
     </div>

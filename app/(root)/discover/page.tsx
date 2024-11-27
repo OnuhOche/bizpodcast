@@ -42,3 +42,15 @@ const Discover = ({ searchParams: { search} }: { searchParams : { search: string
 }
 
 export default Discover
+
+// import React from "react";
+
+// const Discover = () => {
+//   return (
+//     <div>
+//       <h1 className="text-20 font-bold text-white-1">Discover Podcasts</h1>
+//     </div>
+//   );
+// };
+
+// export default Discover;
